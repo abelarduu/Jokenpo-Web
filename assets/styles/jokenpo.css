@@ -1,0 +1,91 @@
+body {
+    cursor: url(../images/tileset.png) -10 0, auto;
+}
+
+#bot{
+    transform: scale(.7);
+}
+#bot .card, .verse{
+    backface-visibility: hidden;
+    background-position:  -260px 0;
+}
+
+.handCards, .tableCards{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    height: 100vh;
+}
+
+.tableCards{
+    width: 100%;
+}
+
+.card{
+    width: 80px;
+    height: 136px;
+    background-image: url(../images/tileset.png);
+    background-position:  -260px 0;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: relative;
+    cursor: pointer;
+    margin: 1.8rem .5rem;
+}
+
+.card:hover {
+    position: relative;
+    bottom: 10px;  
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    background: url(../images/tileset.png) -434px -140px no-repeat; 
+    top: -4px; 
+    left: -6px; 
+    width: 90px; 
+    height: 146px; 
+    opacity: 0; 
+    transition: opacity 0.3s; 
+}
+
+.card:hover::before {
+    opacity: 1; 
+}
+
+.deck{
+    height: 160px;
+    background-position:  -260px -140px;
+}
+
+.deck::before {
+    height: 160px;
+    background: url(../images/tileset.png) -342px -140px no-repeat;
+}
+
+.posCard {
+    content: "";
+    position: relative;
+    background: url(../images/tileset.png) -434px -140px no-repeat; 
+    width: 90px; 
+    height: 146px; 
+    transition: opacity 0.3s; 
+    top: 26px;
+}
+.posCard:hover{
+    position: relative;
+    bottom: 10px;
+}
+
+.rock{
+    background-position:  -344px 0;
+}
+
+.paper{
+    background-position:  -428px 0;
+}
+
+.scissor{
+    background-position:  -514px 0;
+}
